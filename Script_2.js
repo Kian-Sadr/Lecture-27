@@ -11,13 +11,13 @@ function draw_square(){
 }
 
 function move_origin(x, y){
-    //Fill In
+    context.translate(x, y);
 }
 
 function change_angle(){
-    //Fill In
+    context.rotate(45);
 }
 
 function change_scale(x, y){
-    //Fill In
+    context.scale(x, y);
 }
