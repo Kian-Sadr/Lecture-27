@@ -30,5 +30,23 @@ function move_down(){
 }
 
 function shifting(){
-    //To Create
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.save();
+
+    context.beginPath();
+    context.fillStyle = "red";
+    context.fillRect(center_x - half_square, center_y-half_square + shifting_tracker, square_size, square_size);
+
+    if(!moving_up){
+        shifting_tracker += 10;
+    }
+    else
+    {
+        shifting_tracker -= 10;
+    }
+
+    context.fill();
+    context.restore();
+
+    
 }
