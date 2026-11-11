@@ -4,7 +4,7 @@ let context = canvas.getContext("2d");
 let square_size=50;
 let shifting_tracker = 0;
 let animation_length = 100;
-let unchanged = true;
+let moving_up = true;
 
 
 context.fillStyle = "red";
@@ -15,18 +15,18 @@ let half_square = square_size/2
 context.fillRect(center_x-half_square, center_y-half_square, square_size, square_size);
 
 function move_up(){
-    //Use unchanged to control up/down direction
-    if (unchanged == true)
+    //Use moving_up to control up/down direction
+    if (moving_up == true)
         return;
-    unchanged = true;
-    //Code Here
+    moving_up = true;
+    window.requestAnimationFram(shifting);
 }
 
 function move_down(){
-    if (unchanged == false)
+    if (moving_up == false)
         return;
-    unchanged = false;
-    //Code here
+    moving_up = false;
+    window.requestAnimationFram(shifting);
 }
 
 function shifting(){
