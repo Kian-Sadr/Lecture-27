@@ -48,5 +48,8 @@ function shifting(){
     context.fill();
     context.restore();
 
-    
+    if(shifting_tracker < animation_length && shifting_tracker > 0)
+    {
+        window.requestAnimationFram(shifting);
+    }
 }
